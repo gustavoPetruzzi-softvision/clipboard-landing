@@ -1,0 +1,244 @@
+@import "_variables.scss";
+body{
+    margin: 0;
+    font-family: 'Bai Jamjuree', sans-serif;
+    text-align: center;
+    p{
+        @include default-p();
+    }
+    font-size: 18px;
+}
+
+header{
+    margin-bottom: 150px;
+    .product-logo{
+        background-image: url('./images/bg-header-mobile.png');
+        background-repeat:no-repeat;
+        background-size:cover;
+        height: 360px;
+        width:100%;
+        img{
+            margin: 125px;
+        }
+        @media(min-width: 1024px){
+            background-image: url('./images/bg-header-desktop.png');
+            height: 300px;
+        }
+    }
+
+    .product-description{
+        margin: $default-margin;
+        margin-bottom: 50px;
+
+        
+        @media(min-width: 1024px){
+            margin: $desktop-margin;
+        }
+        
+    }
+
+}
+
+.button-container {
+    @include display-flex();
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 130px;
+
+    .main-button{
+        @include button-default(map-get($colors, primary-cyan));
+    }
+
+    .secondary-button{
+        @include button-default(map-get($colors, primary-blue));
+    }
+    
+    @media(min-width: 1024px){
+        flex-direction: row;
+        height: 100%;
+        margin: 50px 28%;
+    }
+
+    @media(min-width:1439px){
+        margin: 50px 30%;
+    }
+}
+
+
+
+
+main{
+    article{
+        margin: $default-margin;
+        @media(min-width:1024px){
+            margin: $desktop-margin;
+        }
+    }
+
+    img{
+        width: 100%;
+    }
+
+    .product-features{
+        margin-top: 60px;
+        margin-bottom: 200px;
+        @media(min-width: 1024px){
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 150px;
+            @include display-flex();
+            h2{
+                margin-top: 60px;
+            }
+            img{
+                width: 50%;
+                transform: translateX(-50px);
+                flex-shrink: 1;
+                margin-right: 50px;
+            }
+            .product-features__items{
+                flex-shrink: 1;
+                text-align: left;
+                width: 30%;
+                min-width: 370px;
+            }
+        }
+        
+        .product-features__item{
+            margin-top: 50px;
+        }
+
+
+    }
+
+    .devices{
+        margin: 0;
+        p{
+            margin-bottom: 70px;
+        }
+
+        img{
+            margin-bottom: 50px;
+        }
+        
+        .devices-workflow{
+            margin: $default-margin;
+        }
+        @media(min-width: 1024px){
+            margin: $desktop-margin;
+        }
+    }
+
+    .product-tools{
+        @include display-flex();
+        flex-direction: column; 
+        margin-bottom: 150px;
+        align-items: center;
+
+        .product-tools__item{
+            margin-bottom: 50px;
+            img{
+                width: 50px;
+            }
+
+            h2{
+                font-size: 24px;
+            }
+        }
+        @media(min-width: 1024px){
+            flex-direction: row;
+            width: 100%;
+            margin: 50px 0;
+            align-items: baseline;
+            justify-content: space-evenly;
+        }
+
+        .product-tools__item{
+            @media(min-width:1024px){
+                width: 24%;
+            }
+        }
+    }
+
+    .associate-companies{
+        @include display-flex();
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        img{
+            width: 150px;
+            margin-bottom: 70px;
+        }
+        @media(min-width: 1024px){
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+    }
+}
+
+.footer{
+    @include display-grid();
+    margin-top: 150px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 150px auto 150px;
+    grid-template-areas: "logo" "links" "media";
+    background-color: lighten(map-get($colors, neutral-blue), 25%);
+    
+    @media(min-width:1024px){
+        grid-template-columns: 25% auto 25%;
+        grid-template-rows: 200px;
+        grid-template-areas: "logo links media";
+    }
+    .logo{
+        grid-area: logo;
+        margin: auto;
+        img {
+            width: 60%;
+        }
+    }
+
+    .links{
+        grid-area: links;
+        @include display-flex();
+        flex-direction: column;
+        align-items: center;
+        font-size: 24px;
+        
+        a{
+            width: 100%;
+            margin: 20px;
+            text-align: center;
+            &:hover{
+                color: map-get($colors,primary-cyan);
+                cursor: pointer;
+            }
+        }
+
+        @media(min-width: 1024px){
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            a{
+                margin:0;
+                width: 31%;
+                text-align: left;
+            }
+        }
+
+    }
+
+    .social-media{
+        grid-area: media;
+        margin: auto;
+        #twitter{
+            margin: 0 30px;
+        }
+        path{
+
+            &:hover{
+                cursor: pointer;
+                fill: map-get($colors, primary-cyan);   
+            }
+        }
+    }
+}

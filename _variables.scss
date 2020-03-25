@@ -1,0 +1,60 @@
+$colors: (
+    primary-cyan: hsl(171, 66%, 44%),
+    primary-blue: hsl(233, 100%, 69%),
+    neutral-grayish: hsl(210, 10%, 33%),
+    neutral-blue: hsl(201, 11%, 66%) 
+);
+
+$default-margin: 0 34px;
+$desktop-margin: 0 25%;
+
+@mixin display-flex(){
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+@mixin display-grid {
+    display: -ms-grid;
+    display: grid;
+}
+@mixin default-p(){
+    line-height: 26px;
+    color: map-get($colors, neutral-blue);  
+}
+@mixin button-default($color) {
+    background-color:$color;
+    margin: auto;
+    padding: 12px 50px;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: white;
+    border-radius:100px;
+    border: none;
+    width: 300px;
+    &:hover{
+        animation: push-up 1s ease-out forwards;
+        cursor: pointer;
+    }
+    
+
+    @media(min-width:1024px){
+        padding: 12px 0; 
+        margin: 0;
+        width: 200px;
+    }
+    @keyframes push-up{
+        0%{
+            transform: translateY(0);
+        }
+        33%{
+            transform: translateY(-1.5rem);
+        }
+        100%{
+            transform: translateY(-1rem);
+        }
+    }
+}
+

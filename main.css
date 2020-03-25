@@ -1,0 +1,235 @@
+body {
+  margin: 0;
+  font-family: 'Bai Jamjuree', sans-serif;
+  text-align: center;
+  font-size: 18px; }
+  body p {
+    line-height: 26px;
+    color: #9fabb2; }
+
+header {
+  margin-bottom: 150px; }
+  header .product-logo {
+    background-image: url("./images/bg-header-mobile.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 360px;
+    width: 100%; }
+    header .product-logo img {
+      margin: 125px; }
+    @media (min-width: 1024px) {
+      header .product-logo {
+        background-image: url("./images/bg-header-desktop.png");
+        height: 300px; } }
+  header .product-description {
+    margin: 0 34px;
+    margin-bottom: 50px; }
+    @media (min-width: 1024px) {
+      header .product-description {
+        margin: 0 25%; } }
+
+.button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 130px; }
+  .button-container .main-button {
+    background-color: #26baa4;
+    margin: auto;
+    padding: 12px 50px;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: white;
+    border-radius: 100px;
+    border: none;
+    width: 300px; }
+    .button-container .main-button:hover {
+      animation: push-up 1s ease-out forwards;
+      cursor: pointer; }
+    @media (min-width: 1024px) {
+      .button-container .main-button {
+        padding: 12px 0;
+        margin: 0;
+        width: 200px; } }
+@keyframes push-up {
+  0% {
+    transform: translateY(0); }
+  33% {
+    transform: translateY(-1.5rem); }
+  100% {
+    transform: translateY(-1rem); } }
+  .button-container .secondary-button {
+    background-color: #6173ff;
+    margin: auto;
+    padding: 12px 50px;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: white;
+    border-radius: 100px;
+    border: none;
+    width: 300px; }
+    .button-container .secondary-button:hover {
+      animation: push-up 1s ease-out forwards;
+      cursor: pointer; }
+    @media (min-width: 1024px) {
+      .button-container .secondary-button {
+        padding: 12px 0;
+        margin: 0;
+        width: 200px; } }
+@keyframes push-up {
+  0% {
+    transform: translateY(0); }
+  33% {
+    transform: translateY(-1.5rem); }
+  100% {
+    transform: translateY(-1rem); } }
+  @media (min-width: 1024px) {
+    .button-container {
+      flex-direction: row;
+      height: 100%;
+      margin: 50px 28%; } }
+  @media (min-width: 1439px) {
+    .button-container {
+      margin: 50px 30%; } }
+
+main article {
+  margin: 0 34px; }
+  @media (min-width: 1024px) {
+    main article {
+      margin: 0 25%; } }
+main img {
+  width: 100%; }
+main .product-features {
+  margin-top: 60px;
+  margin-bottom: 200px; }
+  @media (min-width: 1024px) {
+    main .product-features {
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 150px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex; }
+      main .product-features h2 {
+        margin-top: 60px; }
+      main .product-features img {
+        width: 50%;
+        transform: translateX(-50px);
+        flex-shrink: 1;
+        margin-right: 50px; }
+      main .product-features .product-features__items {
+        flex-shrink: 1;
+        text-align: left;
+        width: 30%;
+        min-width: 370px; } }
+  main .product-features .product-features__item {
+    margin-top: 50px; }
+main .devices {
+  margin: 0; }
+  main .devices p {
+    margin-bottom: 70px; }
+  main .devices img {
+    margin-bottom: 50px; }
+  main .devices .devices-workflow {
+    margin: 0 34px; }
+  @media (min-width: 1024px) {
+    main .devices {
+      margin: 0 25%; } }
+main .product-tools {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 150px;
+  align-items: center; }
+  main .product-tools .product-tools__item {
+    margin-bottom: 50px; }
+    main .product-tools .product-tools__item img {
+      width: 50px; }
+    main .product-tools .product-tools__item h2 {
+      font-size: 24px; }
+  @media (min-width: 1024px) {
+    main .product-tools {
+      flex-direction: row;
+      width: 100%;
+      margin: 50px 0;
+      align-items: baseline;
+      justify-content: space-evenly; } }
+  @media (min-width: 1024px) {
+    main .product-tools .product-tools__item {
+      width: 24%; } }
+main .associate-companies {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center; }
+  main .associate-companies img {
+    width: 150px;
+    margin-bottom: 70px; }
+  @media (min-width: 1024px) {
+    main .associate-companies {
+      flex-direction: row;
+      justify-content: space-evenly; } }
+
+.footer {
+  display: -ms-grid;
+  display: grid;
+  margin-top: 150px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 150px auto 150px;
+  grid-template-areas: "logo" "links" "media";
+  background-color: #e6e9eb; }
+  @media (min-width: 1024px) {
+    .footer {
+      grid-template-columns: 25% auto 25%;
+      grid-template-rows: 200px;
+      grid-template-areas: "logo links media"; } }
+  .footer .logo {
+    grid-area: logo;
+    margin: auto; }
+    .footer .logo img {
+      width: 60%; }
+  .footer .links {
+    grid-area: links;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 24px; }
+    .footer .links a {
+      width: 100%;
+      margin: 20px;
+      text-align: center; }
+      .footer .links a:hover {
+        color: #26baa4;
+        cursor: pointer; }
+    @media (min-width: 1024px) {
+      .footer .links {
+        flex-direction: row;
+        flex-wrap: wrap; }
+        .footer .links a {
+          margin: 0;
+          width: 31%;
+          text-align: left; } }
+  .footer .social-media {
+    grid-area: media;
+    margin: auto; }
+    .footer .social-media #twitter {
+      margin: 0 30px; }
+    .footer .social-media path:hover {
+      cursor: pointer;
+      fill: #26baa4; }
+
+/*# sourceMappingURL=main.css.map */
